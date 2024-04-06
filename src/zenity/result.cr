@@ -1,15 +1,15 @@
 class Zenity
   class Result
     getter command : String
-    getter stdout : String?
-    getter stderr : String?
+    getter output : String?
+    getter error : String?
     getter exit_code : Int32
 
-    def initialize(@command, @stdout, @stderr, @exit_code)
+    def initialize(@command, @output, @error, @exit_code)
     end
 
     def to_h
-      {command: command, stdout: stdout, stderr: stderr, status: status}
+      {command: command, output: output, error: error, exit_code: exit_code}
     end
   end
 end

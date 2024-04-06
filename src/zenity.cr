@@ -34,12 +34,12 @@ class Zenity
       sleep @timeout
       ps.terminate
       s = ps.wait
-      ret = Result.new(command: last_command, stdout: nil, stderr: nil, exit_code: s.exit_code)
+      ret = Result.new(command: last_command, output: nil, error: nil, exit_code: s.exit_code)
     else
       o = stdout.gets_to_end.try &.strip
       e = stderr.gets_to_end.try &.strip
       s = ps.wait
-      ret = Result.new(command: last_command, stdout: o, stderr: e, exit_code: s.exit_code)
+      ret = Result.new(command: last_command, output: o, error: e, exit_code: s.exit_code)
     end
     @last_result = ret
     @history << ret if history_enabled
@@ -60,7 +60,7 @@ class Zenity
     o = stdout.gets_to_end.try &.strip
     e = stderr.gets_to_end.try &.strip
     s = ps.wait
-    ret = Result.new(command: last_command, stdout: o, stderr: e, exit_code: s.exit_code)
+    ret = Result.new(command: last_command, output: o, error: e, exit_code: s.exit_code)
     @last_result = ret
     @history << ret if history_enabled
     return ret
