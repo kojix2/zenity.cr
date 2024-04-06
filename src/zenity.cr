@@ -95,6 +95,7 @@ class Zenity
   end
 
   private def append_single_option(s : String::Builder, key, value)
+    return if value == false # Is that OK?
     s << " --#{hyphenize(key)}"
     s << "=\"#{shellescape(value)}\"" unless value == true
   end
