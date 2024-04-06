@@ -28,7 +28,7 @@ zenity = Zenity.new(path: "/usr/bin/zenity")
 result = zenity.file_selection(title: "Select a file")
 
 # Print the path of the selected file
-puts Path[result.output]
+result.exit_code == 0 ? puts(result.output) : puts("No file selected")
 ```
 
 Explore the [examples](examples) directory to try out more functionalities.
