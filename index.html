@@ -113,7 +113,7 @@ zenity <span class="o">=</span> <span class="t">Zenity</span>.new(path: <span cl
 result <span class="o">=</span> zenity.file_selection(title: <span class="s">&quot;Select a file&quot;</span>)
 
 <span class="c"># Print the path of the selected file</span>
-puts result.output.inspect</code></pre>
+puts <span class="t">Path</span>[result.output]</code></pre>
 <p>Explore the <a href="examples">examples</a> directory to try out more functionalities.</p>
 <p>You can run the examples on both macOS and Windows using the Go language implementation of <a href="https://github.com/ncruces/zenity">Zenity</a>. However, note that it does not support all features of the original Zenity.</p>
 <p>For further information, refer to the <a href="https://kojix2.github.io/zenity.cr">documentation</a>.</p>
