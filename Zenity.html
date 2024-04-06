@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.10.1">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="zenity">
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+  <meta name="repository-name" content="zenity">
+  <title>Zenity - zenity main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          zenity
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="zenity/Zenity" data-name="zenity">
+      <a href="Zenity.html">Zenity</a>
+      
+        <ul>
+  
+  <li class=" " data-id="zenity/Zenity/Result" data-name="zenity::result">
+      <a href="Zenity/Result.html">Result</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Zenity
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="Zenity.html">Zenity</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L4" target="_blank">
+        zenity.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity/result.cr#L1" target="_blank">
+        zenity/result.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity/version.cr#L1" target="_blank">
+        zenity/version.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="VERSION">
+        <strong>VERSION</strong> = <code><span class="o">{{</span> (<span class="s">`shards version /home/runner/work/zenity.cr/zenity.cr/src/zenity`</span>).chomp.stringify }}</code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28path%3AString%3D%22zenity%22%2Chistory%3ABool%3Dtrue%2Ctimeout%3AFloat%3D0.5%29-class-method" class="signature"><strong>.new</strong>(path : String = <span class="s">&quot;zenity&quot;</span>, history : Bool = <span class="n">true</span>, timeout : Float = <span class="n">0.5</span>)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="macro-summary" class="anchor" href="#macro-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Macro Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#define_command%28name%29-macro" class="signature"><strong>define_command</strong>(name)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#calendar%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#calendar</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#calendar%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method" class="signature"><strong>#calendar</strong>(*args, **options, &)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#color_selection%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#color_selection</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#color_selection%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method" class="signature"><strong>#color_selection</strong>(*args, **options, &)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#entry%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#entry</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#entry%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method" class="signature"><strong>#entry</strong>(*args, **options, &)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#error%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#error</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#error%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method" class="signature"><strong>#error</strong>(*args, **options, &)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#file_selection%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#file_selection</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#file_selection%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method" class="signature"><strong>#file_selection</strong>(*args, **options, &)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#forms%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#forms</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#forms%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method" class="signature"><strong>#forms</strong>(*args, **options, &)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#history%3AArray%28Zenity%3A%3AResult%29-instance-method" class="signature"><strong>#history</strong> : Array(Zenity::Result)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#history_enabled%3ABool-instance-method" class="signature"><strong>#history_enabled</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#info%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#info</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#info%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method" class="signature"><strong>#info</strong>(*args, **options, &)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#last_command%3AString-instance-method" class="signature"><strong>#last_command</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#last_result%3AZenity%3A%3AResult%7CNil-instance-method" class="signature"><strong>#last_result</strong> : Zenity::Result | Nil</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#list%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#list</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#list%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method" class="signature"><strong>#list</strong>(*args, **options, &)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#notification%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#notification</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#notification%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method" class="signature"><strong>#notification</strong>(*args, **options, &)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#password%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#password</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#password%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method" class="signature"><strong>#password</strong>(*args, **options, &)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#path%3AString-instance-method" class="signature"><strong>#path</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#path%3D%28path%3AString%29-instance-method" class="signature"><strong>#path=</strong>(path : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#progress%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#progress</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#progress%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method" class="signature"><strong>#progress</strong>(*args, **options, &)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#question%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#question</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#question%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method" class="signature"><strong>#question</strong>(*args, **options, &)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#scale%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#scale</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#scale%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method" class="signature"><strong>#scale</strong>(*args, **options, &)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#text_info%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#text_info</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#text_info%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method" class="signature"><strong>#text_info</strong>(*args, **options, &)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#warning%28%2Aargs%2C%2A%2Aoptions%29-instance-method" class="signature"><strong>#warning</strong>(*args, **options)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#warning%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method" class="signature"><strong>#warning</strong>(*args, **options, &)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(path:String=&quot;zenity&quot;,history:Bool=true,timeout:Float=0.5)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(path : String = <span class="s">&quot;zenity&quot;</span>, history : Bool = <span class="n">true</span>, timeout : Float = <span class="n">0.5</span>)
+
+        <a class="method-permalink" href="#new%28path%3AString%3D%22zenity%22%2Chistory%3ABool%3Dtrue%2Ctimeout%3AFloat%3D0.5%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>
+    <a id="macro-detail" class="anchor" href="#macro-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Macro Detail
+  </h2>
+  
+    <div class="entry-detail" id="define_command(name)-macro">
+      <div class="signature">
+        
+        macro <strong>define_command</strong>(name)
+
+        <a class="method-permalink" href="#define_command%28name%29-macro">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L113" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="calendar(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>calendar</strong>(*args, **options)
+
+        <a class="method-permalink" href="#calendar%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L128" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="calendar(*args,**options,&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>calendar</strong>(*args, **options, &)
+
+        <a class="method-permalink" href="#calendar%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L128" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="color_selection(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>color_selection</strong>(*args, **options)
+
+        <a class="method-permalink" href="#color_selection%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L140" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="color_selection(*args,**options,&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>color_selection</strong>(*args, **options, &)
+
+        <a class="method-permalink" href="#color_selection%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L140" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="entry(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>entry</strong>(*args, **options)
+
+        <a class="method-permalink" href="#entry%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L130" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="entry(*args,**options,&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>entry</strong>(*args, **options, &)
+
+        <a class="method-permalink" href="#entry%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L130" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="error(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>error</strong>(*args, **options)
+
+        <a class="method-permalink" href="#error%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L135" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="error(*args,**options,&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>error</strong>(*args, **options, &)
+
+        <a class="method-permalink" href="#error%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L135" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="file_selection(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>file_selection</strong>(*args, **options)
+
+        <a class="method-permalink" href="#file_selection%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L133" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="file_selection(*args,**options,&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>file_selection</strong>(*args, **options, &)
+
+        <a class="method-permalink" href="#file_selection%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L133" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forms(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>forms</strong>(*args, **options)
+
+        <a class="method-permalink" href="#forms%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L134" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="forms(*args,**options,&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>forms</strong>(*args, **options, &)
+
+        <a class="method-permalink" href="#forms%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L134" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="history:Array(Zenity::Result)-instance-method">
+      <div class="signature">
+        
+        def <strong>history</strong> : Array(<a href="Zenity/Result.html">Zenity::Result</a>)
+
+        <a class="method-permalink" href="#history%3AArray%28Zenity%3A%3AResult%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L6" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="history_enabled:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>history_enabled</strong> : Bool
+
+        <a class="method-permalink" href="#history_enabled%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L7" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="info(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>info</strong>(*args, **options)
+
+        <a class="method-permalink" href="#info%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L136" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="info(*args,**options,&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>info</strong>(*args, **options, &)
+
+        <a class="method-permalink" href="#info%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L136" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="last_command:String-instance-method">
+      <div class="signature">
+        
+        def <strong>last_command</strong> : String
+
+        <a class="method-permalink" href="#last_command%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L8" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="last_result:Zenity::Result|Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>last_result</strong> : <a href="Zenity/Result.html">Zenity::Result</a> | Nil
+
+        <a class="method-permalink" href="#last_result%3AZenity%3A%3AResult%7CNil-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L9" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="list(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>list</strong>(*args, **options)
+
+        <a class="method-permalink" href="#list%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L139" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="list(*args,**options,&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>list</strong>(*args, **options, &)
+
+        <a class="method-permalink" href="#list%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L139" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="notification(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>notification</strong>(*args, **options)
+
+        <a class="method-permalink" href="#notification%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L141" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="notification(*args,**options,&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>notification</strong>(*args, **options, &)
+
+        <a class="method-permalink" href="#notification%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L144" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="password(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>password</strong>(*args, **options)
+
+        <a class="method-permalink" href="#password%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L132" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="password(*args,**options,&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>password</strong>(*args, **options, &)
+
+        <a class="method-permalink" href="#password%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L132" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="path:String-instance-method">
+      <div class="signature">
+        
+        def <strong>path</strong> : String
+
+        <a class="method-permalink" href="#path%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="path=(path:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>path=</strong>(path : String)
+
+        <a class="method-permalink" href="#path%3D%28path%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="progress(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>progress</strong>(*args, **options)
+
+        <a class="method-permalink" href="#progress%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L142" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="progress(*args,**options,&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>progress</strong>(*args, **options, &)
+
+        <a class="method-permalink" href="#progress%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L142" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="question(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>question</strong>(*args, **options)
+
+        <a class="method-permalink" href="#question%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="question(*args,**options,&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>question</strong>(*args, **options, &)
+
+        <a class="method-permalink" href="#question%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="scale(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>scale</strong>(*args, **options)
+
+        <a class="method-permalink" href="#scale%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L129" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="scale(*args,**options,&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>scale</strong>(*args, **options, &)
+
+        <a class="method-permalink" href="#scale%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L129" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="text_info(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>text_info</strong>(*args, **options)
+
+        <a class="method-permalink" href="#text_info%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L131" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="text_info(*args,**options,&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>text_info</strong>(*args, **options, &)
+
+        <a class="method-permalink" href="#text_info%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L131" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="warning(*args,**options)-instance-method">
+      <div class="signature">
+        
+        def <strong>warning</strong>(*args, **options)
+
+        <a class="method-permalink" href="#warning%28%2Aargs%2C%2A%2Aoptions%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L137" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="warning(*args,**options,&amp;)-instance-method">
+      <div class="signature">
+        
+        def <strong>warning</strong>(*args, **options, &)
+
+        <a class="method-permalink" href="#warning%28%2Aargs%2C%2A%2Aoptions%2C%26%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/zenity.cr/blob/07f4c6250b6a6842b0de281805be268177ff6c42/src/zenity.cr#L137" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+</div>
+
+</body>
+</html>
