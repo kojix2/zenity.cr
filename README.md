@@ -20,8 +20,10 @@
 require "zenity"
 ```
 
-
 ## Development
+
+This tool is a work in progress, but I am trying to keep the implementation as simple as possible to leave as little room for bugs as possible. 
+Please contact us if you have any suggestions.
 
 ## Contributing
 
