@@ -124,7 +124,11 @@ describe Zenity::Result do
 
   it "forwards missing methods to the status object" do
     3.times do |i|
-      status = Process::Status.new(i)
+      status = {% if flag?(:windows) %}
+                 Process::Status.new(i.to_u32)
+               {% else %}
+                 Process::Status.new(i)
+               {% end %}
       result = Zenity::Result.new("command", "output", "error", status)
       result.success?.should eq(status.success?)
       result.exit_status.should eq(i)
