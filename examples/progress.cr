@@ -52,8 +52,8 @@ r = zenity.progress(
 end
 
 # FIXME: It raises the following error when the user cancels the dialog:
-# 
-# Unhandled exception: Error writing file (#<IO::FileDescriptor:0x1011ad600>): 
+#
+# Unhandled exception: Error writing file (#<IO::FileDescriptor:0x1011ad600>):
 # Broken pipe (IO::Error)
 
 pp r
