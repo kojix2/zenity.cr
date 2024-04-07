@@ -33,14 +33,14 @@ class Zenity
     if terminate
       sleep @timeout
       ps.terminate
-      s = ps.wait
-      ret = Result.new(command: last_command, output: nil, error: nil, exit_code: s.exit_code)
+      # FIXME we can not get the output of the command
+      o = e = nil
     else
       o = stdout.gets_to_end.try &.strip
       e = stderr.gets_to_end.try &.strip
-      s = ps.wait
-      ret = Result.new(command: last_command, output: o, error: e, exit_code: s.exit_code)
     end
+    s = ps.wait
+    ret = Result.new(command: last_command, output: o, error: e, status: s)
     @last_result = ret
     @history << ret if history_enabled
     return ret
@@ -60,7 +60,7 @@ class Zenity
     o = stdout.gets_to_end.try &.strip
     e = stderr.gets_to_end.try &.strip
     s = ps.wait
-    ret = Result.new(command: last_command, output: o, error: e, exit_code: s.exit_code)
+    ret = Result.new(command: last_command, output: o, error: e, status: s)
     @last_result = ret
     @history << ret if history_enabled
     return ret

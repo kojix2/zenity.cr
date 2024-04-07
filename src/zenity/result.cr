@@ -3,13 +3,11 @@ class Zenity
     getter command : String
     getter output : String?
     getter error : String?
-    getter exit_code : Int32
+    getter status : Process::Status
 
-    def initialize(@command, @output, @error, @exit_code)
+    def initialize(@command, @output, @error, @status)
     end
 
-    def to_h
-      {command: command, output: output, error: error, exit_code: exit_code}
-    end
+    forward_missing_to @status
   end
 end
